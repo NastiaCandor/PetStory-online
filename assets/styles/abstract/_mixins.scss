@@ -1,0 +1,31 @@
+@mixin font ($size, $weight, $height, $style:normal) {
+    font-style: $style;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+// 1325px
+@mixin media-animal-slider {
+    @media (max-width: $width-animal-slider) { @content; }
+}
+// 1000px
+@mixin media-small-desktop {
+    @media (max-width: $small-desktop-width) { @content; }
+}
+// 920px
+@mixin media-small-laptop {
+    @media (max-width: $small-laptop-width) { @content; }
+}
+// 640px
+@mixin media-tablet {
+    @media (max-width: $tablet-width) { @content; }
+}
+// // 600px
+// @mixin media-tablet-600 {
+//     @media (max-width: $tablet-width) { @content; }
+// }
+
+// 320px
+@mixin media-mobile {
+    @media (max-width: $mobile-width) { @content; }
+}

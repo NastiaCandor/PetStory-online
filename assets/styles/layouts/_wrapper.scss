@@ -1,0 +1,14 @@
+.wrapper {
+    max-width: $wrapper-width;
+    margin: 0 auto;
+    @include media-small-desktop {
+        max-width: $small-desktop-width-wrapper;
+    }
+    @include media-tablet {
+        max-width: $tablet-width-wrapper;
+    }
+    @include media-mobile {
+        max-width: $mobile-width-wrapper;
+    }
+    
+}

@@ -1,0 +1,98 @@
+.backstage {
+    background: url(../../assets/images/flower_foto1.png) 100% 10px no-repeat;
+    background-size: 205px 615px;
+    @include media-animal-slider {
+        background: none;
+    }
+    @include media-tablet {
+        background: url(../../assets/images/flower_foto1.png) 105% 0px no-repeat;
+        background-size: 155px 475px;
+    }
+    @include media-mobile {
+        background: none;
+    }
+    @include media-mobile {
+        background: url(../../assets/images/flower_foto1.png) 115% 37px no-repeat;
+        background-size: 70px 217px;
+    }
+}
+
+.backstage__wrapper {
+    padding: 140px 0 180px;
+    display: flex;  
+    @include media-small-desktop {
+        padding: 100px 0 150px;
+    }
+    @include media-tablet {
+        padding: 60px 0 80px 0px;
+    }
+    @include media-mobile {
+        padding: 103px 0 39px 0;
+    }
+}
+
+.backstage__photo {
+    width: 609px;
+    height: 403px;
+    overflow: hidden;
+    position: relative;
+    @include media-small-desktop {
+        width: 465px;
+        height: 418px;
+        &_pic {
+            position: absolute;
+            left: -80px;
+            height: 100%;
+            width: auto;
+            margin-top: 10px;
+        }
+    }
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.backstage__info {
+    width: 465px;
+    margin-left: 87px;
+    @include media-small-desktop {
+        margin-left: 31px;
+    }
+    @include media-tablet {
+        margin-left: 3px;
+    }
+    @include media-mobile {
+        margin: 0;
+    }
+}
+
+.backstage__title {
+    @include media-mobile {
+        font-size: 2.4rem;
+    }
+}
+
+.backstage__text {
+    line-height: 130%;
+    margin-top: 20px;
+    @include media-mobile {
+        margin-top: 10px;
+    }
+}
+
+.backstage_upper_text {
+    margin: 54px 0 34px;
+    @include media-tablet {
+        margin: 30px 0 20px;
+    }
+    @include media-mobile {
+        margin: 20px 0 10px;
+    }
+}
+
+.second_backstage_text {
+    line-height: 140%;
+    @include media-tablet {
+        width: 100%;
+    }
+}

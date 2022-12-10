@@ -1,0 +1,484 @@
+.picknfeed {
+    background: $color-orange-grad;
+    opacity: 0.9;
+    padding: 40px 0 180px;
+    @include media-small-desktop {
+        padding-bottom: 30px;
+    }
+    @include media-tablet {
+        padding: 25px 0 44px;
+    }
+    @include media-mobile {
+        padding: 25px 5px 16.5px 5px;
+    }
+}
+
+.picknfeed__annotation {
+    color: $color-donate-text-annotation;
+}
+
+.picknfeed_annotation_title {
+    color: currentColor;
+    margin-bottom: 8px;
+    @include media-small-desktop {
+        margin-right: 120px;
+        margin-bottom: 30px;
+    }
+    @include media-tablet {
+        font-size: 2.4rem;
+        margin:0 20px 20px 0;
+    }
+    @include media-mobile {
+        margin: 0 0 17px 0;
+    }
+}
+
+.picknfeed_annotation_text {
+    color: currentColor;
+    margin-bottom: 45px;
+    line-height: 140%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    @include media-tablet {
+        margin:0 0 27px 0;
+    }
+    @include media-mobile {
+        line-height: 138%;
+    }
+}
+
+.picknfeed_annotation_text span{ 
+    font-weight: 500;
+}
+
+.picknfeed__subtitle {
+    color: $color-orange;
+    margin-bottom: 60px;
+    @include media-small-desktop {
+        margin-bottom: 45px;
+    }
+    @include media-tablet {
+        margin:0 0px 28px 0;
+    }
+    @include media-mobile {
+        font-size: 2.4rem;
+        margin-bottom: 30px;
+    }
+}
+
+.picknfeed__friend {
+    background: rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    padding: 40px 92px 62px 92px;
+    @include media-small-desktop {
+        padding: 20px 47px 50px 47px;
+    }
+    @include media-tablet {
+        padding: 32px 0px 35px 0px;
+    }
+    @include media-mobile {
+        padding: 20px 0 27px 0;
+    }
+}
+
+.picknfeed__friend__title {
+    text-align: center;
+    color: $color-orange;
+    margin-bottom: 20px;
+    margin-right: 15px;
+    @include media-small-desktop {
+        margin-bottom: 10px;
+    }
+    @include media-tablet {
+        margin:0 0 20px 0;
+    }
+    @include media-mobile {
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+    }
+}
+
+.picknfeed__friend__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 120%;
+    margin-bottom: 60px;
+    @include media-tablet {
+        text-align: center;
+        margin-bottom: 55px;
+    }
+    @include media-mobile {
+        font-size: 1.6rem;
+        line-height: 140%;
+        margin-bottom: 10px;
+    }
+}
+
+.picknfeed__form {
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+// Pick n feed calc demonstration
+
+.picknfeed__diet {
+    height: 246px;
+    display: flex;
+    align-items:center;
+    padding-left: 215px;
+    @include media-small-desktop {
+        padding-left: 150px;
+    }
+    @include media-tablet {
+        padding-left: 25px;
+    }
+    @include media-mobile {
+        padding: 0;
+        height: 139px;
+    }
+}
+
+.diet__info {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    color: #000;
+    margin-top: 55px;
+    @include media-mobile {
+        margin-top: 35px;
+    }
+}
+
+.diet__number {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7.2rem;
+    line-height: 80%;
+    color: currentColor;
+    margin-bottom: 11px;
+    @include media-mobile {
+        font-size: 4.06rem;
+        margin-bottom: 7px;
+    }
+}
+
+.diet__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 140%;
+    color: currentColor;
+    @include media-mobile {
+        font-size: 0.9rem;
+    }
+}
+
+.diet__x {
+    margin: 35px 64px 0 11px;
+    &_svg {
+        height: 100%;
+    }
+    @include media-mobile {
+        margin: 0 36px 0 6px;
+        height: 8px;
+    }
+}
+
+.diet__icon {
+    &__svg {
+        height: 100%;
+    }
+    @include media-mobile {
+        height: 100%;
+    }
+}
+
+// Slider 
+
+.picknfeed_calc_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 140%;
+    color: #000;
+    margin: 49px 0 0 3px;
+    @include media-small-desktop {
+        margin: 49px 0 0 15px;
+    }
+    @include media-tablet {
+        margin: 40px 0 0 5px;
+    }
+    @include media-mobile {
+        margin: 3px 0 4px 0;
+    }
+}
+
+.picknfeed__money__check {
+    width: 100%;
+    @include media-small-desktop {
+        width: calc(100% - 40px);
+    }
+    @include media-tablet {
+        width: 100%;
+    }
+}
+
+.picknfeed__amount {
+    background-color: $color-donate-slider-background;
+    width: 100%;
+    height: 27px;
+    display: flex;
+    align-items:center;
+    margin-top: 17px;
+    @include media-tablet {
+        margin: 5px 0;
+    }
+    @include media-mobile {
+        height: 13.5px;
+    }
+}
+
+.amount__line {
+    width: 100%;
+    margin: 0 32px 0 32px;
+    height: 2px;
+    background-color: $color-donate-slider-line;
+    @include media-small-desktop {
+        margin: 0 15px 0 15px;
+    }
+    @include media-tablet {
+        margin: 0 38px 0 35px;
+    }
+    @include media-mobile {
+        margin: 0 25px 0 25px;
+    }
+}
+
+.amount__radio {
+    width: 100%;
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-content: space-between;
+    grid-column-gap: 56px;
+    @include media-small-desktop {
+        grid-template-columns: repeat(7, 1fr);
+        grid-column-gap: 70px;
+        .money_choice:first-child {
+            display: none;
+        }
+    }
+    @include media-tablet {
+        margin-left: 15px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 50px;
+        .money_choice:nth-child(2),.money_choice:nth-child(3) {
+            display: none;
+        }
+        .money_choice:nth-child(4),.money_choice:nth-child(5),.money_choice:nth-child(6),.money_choice:nth-child(7) {
+            margin-right: 20px;
+        }
+
+        .money_choice:last-child {
+            margin-right: 30px;
+        }
+    }
+    @include media-mobile {
+        margin: 6px 0 0 0;
+        grid-column-gap: 10px;
+        .money_choice span {
+            font-size: 1.0rem;
+        }
+        .money_choice:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+.money_choice span {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.amount__radio input {
+    display: none;
+}
+
+.amount__radio label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.6rem;
+    line-height: 140%;
+    color: $color-black-blue;
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    cursor: pointer;
+    @include media-mobile {
+        font-size: 1.3rem;
+    }
+}
+
+.amount__radio label::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -45px;
+    background: url(../../assets/icons/roller_center.svg) center center no-repeat;
+    @include media-small-desktop {
+        left: 0px;
+    }
+    @include media-mobile {
+        width: 100%;
+        height: 20px;
+        top: -23.5px;
+        background-size: 5px 5px;
+    }
+}
+
+.amount__radio input:checked + label{
+    color: $color-orange;
+    &::before {
+        background:url(../../assets/icons/roller_icon_2.svg) center center no-repeat;
+        @include media-mobile {
+            background-size: 20px 20px;
+        }
+    }
+    
+}
+
+
+.calc__input input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+	width: 10px;
+	height: 10px;
+    border: 20px solid transparent;
+    border-image: url(../../assets/icons/roller_icon_2.svg) 19.455555 stretch;
+	border-radius: 50%;
+	cursor: -moz-grab;
+	cursor: -webkit-grab; 
+}
+
+// Another amount input
+
+.picknfeed__input__dollar {
+    color: $color-donate-input-number;
+    position: relative;
+    width: 268px;
+    height: 54px;
+    margin: 50px 0 25px;
+    @include media-tablet {
+        width: 180px;
+        height: 42px;
+        margin-bottom: 30px;
+    }
+    @include media-mobile {
+        margin: 24px 0 28px -10px;
+        width: 170px;
+    }
+}
+
+.svg_dollar {
+    position: absolute;
+    right: 10px;
+    top: 17px;
+    @include media-tablet {
+        top: 10px;
+    }
+    @include media-mobile {
+        right: 0px;
+    }
+}
+
+.picknfeed__input__dollar input[type=number] {
+    border: 1px solid;
+    border-color: $color-donate-input-number;
+    border-radius: 2px;
+    width: 100%;
+    height: 100%;
+    padding-left: 9px;
+    background: none;
+    color: currentColor;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 140%;
+}
+
+.picknfeed__input__dollar input[type=number]::-webkit-outer-spin-button,
+.picknfeed__input__dollar input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.picknfeed__input__dollar:hover .svg_dollar{
+    color: $color-green;
+}
+
+.input__amount:focus, .input__amount:active , .input__amount:hover {
+    border: 1px $color-green solid !important; 
+    color: $color-green !important;
+    outline: 0.0625rem solid transparent;
+}
+
+.input__amount:focus + .svg_dollar {
+    color: $color-green;
+}
+
+// Checkbox freaquancy input
+
+.input__freak{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    @include media-mobile {
+        margin-bottom: 26.5px;
+    }
+}
+
+.input__freak input[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid $color-orange;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.2s all ease-in-out;
+}
+
+.input__freak input[type=radio]:checked {
+    border: none;
+    background-color: $color-green;
+}
+
+.input__freak label{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 10px;
+}
+
+.input_radio_two {
+    margin-left: 50px;
+}
+
+.btn__donate__feed {
+    margin-left: 6px;
+    @include media-mobile {
+        margin: 0;
+    }
+}
+
+.picknfeed__comment {
+    margin-top: 30px;
+    text-align: center;
+    @include media-mobile {
+        margin: 30px -5px 0 -5px;
+    }
+}

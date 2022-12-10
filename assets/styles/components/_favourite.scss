@@ -1,0 +1,110 @@
+.favourite {
+    height: 700px;
+    background-image: url(../../assets/images/Giant_Panda.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    overflow: hidden;
+    @include media-small-desktop {
+        height: 504px;
+        background-position: top;
+    }
+    @include media-tablet {
+        height: calc(187px + ((339 - 187) * ((100vw - 320px)/ (640 - 320))));
+    }
+    @include media-mobile {
+        overflow: visible;
+    }
+}
+
+.favourite__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    margin-top: 12px;
+    padding-left: 10px;
+    @include media-mobile {
+        margin: 0;
+        padding-top: 20px;
+    }
+}
+
+.favourite__circle {
+    width: 465px; 
+    height: 465px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 50%;
+    grid-column: 2;
+    grid-row: 1;
+    @include media-small-desktop {
+        width: 365px;
+        height: 365px;
+        margin: -20px 0 0 -50px;
+    }
+    @include media-tablet {
+        height: calc(119px + ((238 - 119) * ((100vw - 320px)/ (640 - 320))));
+        width: calc(119px + ((238 - 119) * ((100vw - 320px) / (640 - 320))));
+        margin: -3px 0 0 5px;
+    }
+    @include media-mobile {
+        width: 120px;
+        height: 120px;
+        margin: 0;
+    }
+}
+
+.favourite__title {
+    text-align: center;
+    grid-column: 2;
+    grid-row: 1;
+    margin: 75px 0 0 70px;
+    @include media-small-desktop {
+        margin: 32px 45px 0 0;
+    }
+    @include media-tablet {
+        margin-right: -40px;
+    }
+    @include media-mobile {
+        margin: 20px 0 0 20px;
+    }
+}
+
+.favourite__text {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 106.496px;
+    line-height: 75%;
+    text-transform: uppercase;
+    @include media-small-desktop {
+        font-size: 8.5rem;
+    }
+    @include media-tablet {
+        font-size: calc(28px + ((54 - 28) * ((100vw - 320px) / (640 - 320))));
+    }
+    @include media-mobile {
+        font-size: 2.8rem;
+    }
+}
+
+.favourite__text span {
+    color: $color-yellow;
+}
+
+.button__watch {
+    grid-column: 2;
+    margin: auto;
+    padding: 60px 0 0 80px;
+    @include media-small-desktop {
+        padding: 40px 45px 0 0px;
+    }
+    @include media-tablet {
+        padding: 0;
+        margin: -7px 0 0 -10px;
+        grid-column: 1;
+        grid-row: 2;
+    }
+    @include media-mobile {
+        position: absolute;
+        padding: 68px 0 0 0;
+    }
+}

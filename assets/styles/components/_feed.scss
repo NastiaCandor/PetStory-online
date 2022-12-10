@@ -1,0 +1,210 @@
+.feed {
+    background: $color-orange-grad;
+    opacity: 0.9;
+    padding: 69px 0 100px;
+    @include media-small-desktop {
+        padding: 27px 0 50px;
+    }
+    @include media-tablet {
+        padding: 18px 10px 20px 10px;
+    }
+}
+
+.feed_wrapper {
+    @include media-tablet {
+        max-width: 100%;
+    }
+    @include media-mobile {
+        min-width: $mobile-width-wrapper;
+    }
+}
+
+.feed__block {
+    width: 100%;
+    background: $color-frosted-glass-white;
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+    @include media-mobile {
+        padding-bottom: 40px;
+    }
+}
+
+.feed__title{
+    margin: 41px 0 30px;
+    text-align: center;
+    color: $color-orange;
+    @include media-small-desktop {
+        margin: 34px 0 20px;
+    }
+    @include media-tablet {
+        font-size: 4.2rem;
+        margin-top: 10px;
+    }
+    @include media-mobile {
+        font-size: 2.4rem;
+        margin: 23px 0 10px;
+    }
+}
+
+.feed__text {
+    margin-left: 99px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    @include media-small-desktop {
+        margin-left: 50px;
+        margin-right: 80px;
+    }
+    @include media-tablet {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.feed_upper_text {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 120%;
+    margin-bottom: 40px;
+    margin-left: 99px;
+    @include media-small-desktop {
+        margin-bottom: 18px;
+        margin-left: 50px;
+    }
+    @include media-tablet {
+        margin-left: 20px;
+        font-size: 2.2rem;
+    }
+    @include media-mobile {
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.covid_text {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 130%;
+    margin-bottom: 10px;
+    @include media-small-desktop {
+        margin-right: 80px;
+        margin-bottom: 5px;
+        line-height: 100%;
+    }
+    @include media-tablet {
+        margin-right: 20px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+}
+
+.feed__link {
+    color: $color-black-blue;
+    border-bottom: solid 1px $color-orange;
+}
+
+.feed__subtitle {
+    text-align: center;
+    margin: 60px 0 40px;
+    @include media-small-desktop {
+        margin: 45px 0 40px;
+    }
+    @include media-tablet {
+        margin: 35px 0 14px;
+    }
+    @include media-mobile {
+        margin: 19px 0 20px;
+    }
+}
+
+.pay__steps {
+    display: flex;
+    margin:0 auto;
+    height: 244px;
+    max-width: 764px;
+    width: 100%;
+    justify-content: space-between;
+    @include media-tablet {
+        position: relative;
+        width: calc(100% - 55px);
+    }
+    @include media-mobile {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+.step {
+    height: 100%; 
+    width: 168px;
+    @include media-mobile {
+        height: 245px;
+    }
+}
+
+.pay__icon {
+    width: 100%;
+    height: 168px;
+    background: #FFF;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-color: $color-orange;
+    border-radius: 5px;
+}
+
+.pay__text {
+    margin-top: 30px;
+    line-height: 140%;
+    @include media-mobile {
+        margin-top: 6px;
+    }
+}
+
+.arrow__pay {
+    margin-top: 62px;
+    @include media-tablet {
+        .pay_arrow {
+            display: none;
+        }
+        background: url(../../assets/icons/arrow_green_pay.svg) no-repeat, url(../../assets/icons/arrow_green_pay.svg) no-repeat;
+        background-position: 135px 0px, 345px 0;
+        margin-top: 0px;
+        height: 30px;
+        width: 100%;
+        position: absolute;
+        top: -14px;
+    }
+    @include media-mobile {
+        background-position: 0px 0px, 250px 0px;
+        top: 320px;
+        left: 25%;
+        transform: rotate(90deg);
+        width: 350px;
+    }
+}
+
+.btn__feed {
+    margin: 60px auto 0 auto;
+    @include media-small-desktop {
+        margin-top: 70px;
+    }
+    @include media-tablet {
+        margin-top: 43px;
+    }
+    @include media-mobile {
+        margin-top: 18px;
+    }
+}

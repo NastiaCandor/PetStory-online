@@ -1,0 +1,46 @@
+.btn__wide {
+    padding: 16px 0 16px 0;
+    font-family: "Roboto", Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 140%;
+    background: $color-orange-btn;
+    border: none;
+    border-radius: 25px;
+    color: #FFF;
+    width: 298px;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    // @include media-small-desktop {
+    //     padding: 15px 0 15px;
+    // }
+    &:hover {
+        background: $color-orange-hover;
+    }
+    &:active {
+        background: $color-green;
+    }
+}
+
+.btn_rectangle {
+    border-radius: 5px;
+}
+
+.btn__round {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 62px;
+    border: none;
+    outline: none;
+    width: 62px;
+    height: 62px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:active {
+        background: $color-green;
+    }
+}

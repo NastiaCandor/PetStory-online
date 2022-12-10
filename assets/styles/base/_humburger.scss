@@ -1,0 +1,109 @@
+%humburget__line {
+    background: $color-humburger-line;
+    border-radius: 2px;
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    content: "";
+    transition: all 0.3s ease 0.3s;
+}
+
+.hamburger {
+    display: none;
+    width: 18px;
+    height: 10px;
+    position: relative;
+    z-index: 20;
+    transition: all 0.3s ease 0.3s;
+    @include media-tablet {
+        display: inline-block;
+    }
+    &::before {
+        @extend %humburget__line;
+        top: 0;
+        transition: all 0.3s ease 0.3s;
+    }
+    &::after {
+        @extend %humburget__line;
+        top: calc(100% - 2px);
+        transition: all 0.3s ease 0.3s;
+        // left: 0;
+    }
+    &._active {
+        .humburget__line {
+            opacity: 0;
+        }
+        &::before {
+            background: $color-black-blue;
+            top: 50%;
+            transform: rotate(-45deg) ;
+        }
+        &::after {
+            background: $color-black-blue;
+            top: 50%;
+            transform: rotate(45deg) ;
+        }
+    }
+}
+
+.humburget__line {
+    @extend %humburget__line;
+    top: calc(50% - 1px);
+}
+
+@include media-tablet {
+    .menu__header {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        transform: translate(0, -100%);
+        z-index: 20;
+        background: rgb(255, 255, 255);
+        transition: all 0.9s ease 0s;
+        padding: 67px 0 40px 10px;
+        &._active {
+            transform: translate(0px, 0px);
+        }
+        .menu__item {
+            margin: 15px 0 0 0 ;
+        }
+        .menu__ul {
+            flex-direction: column;
+        }
+        .designed__link {
+            margin: 15px 0 0 0;
+        }
+        .menu__link {
+            color: $color-black-blue;
+            font-weight: 400;
+        }
+    }
+    .logo__wrapper {
+        transition: all 0.9s ease 0s;
+        .name {
+            transition: all 0.9s ease 0s;
+        }
+        &._active {
+            margin: 10px 0 0 -10px;
+            .name {
+                color: $color-orange;
+                font-size: 1.6rem;
+                
+            }
+            .logo__image {
+                display: block;
+                width: 65.6px;
+                height: 42px;
+                margin: -2px 0 0 -2px;
+            }
+            @include media-mobile {
+                margin: 10px 0 0 0px;
+            }
+        }
+    }
+    
+}
