@@ -8,6 +8,9 @@ body {
   font-size: 1.6rem;
   margin: 0 auto;
 }
+body._lock {
+  overflow: hidden;
+}
 
 h1 {
   text-align: center;
@@ -254,6 +257,24 @@ li {
 
 .designed__link {
   margin: 0 0 0 auto;
+}
+
+.menu__bg {
+  position: fixed;
+  transition: 0.3s all ease-in-out 0.3s;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100vw;
+  height: 1000vw;
+  pointer-events: none;
+  z-index: 10;
+}
+.menu__bg._active {
+  pointer-events: all;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.3s all ease-in-out 0.3s;
 }
 
 .favourite {
@@ -1282,6 +1303,7 @@ li {
   font-style: normal;
   font-weight: 300;
   overflow-y: scroll;
+  scrollbar-width: none;
 }
 .testim__text::-webkit-scrollbar {
   width: 5px;
@@ -1295,6 +1317,7 @@ li {
 @media (max-width: 640px) {
   .testim__text {
     height: 35px;
+    overflow-y: hidden;
   }
   .testim__text::-webkit-scrollbar {
     width: 0px;
@@ -1450,6 +1473,7 @@ li {
 .testim__content._popup_content .testim__text {
   height: 309px;
   padding-right: 5px;
+  overflow-y: scroll;
 }
 .testim__content._popup_content .testim__text::-webkit-scrollbar {
   width: 5px;
@@ -1986,6 +2010,7 @@ li {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 140%;
+  -moz-appearance: textfield;
 }
 
 .picknfeed__input__dollar input[type=number]::-webkit-outer-spin-button,
@@ -2177,6 +2202,7 @@ li {
   border-radius: 2px;
   font-size: 1.6rem;
   width: 220px;
+  color: #BDBDBD;
 }
 
 .subscribe__email:focus, .subscribe__email:active, .subscribe__email:hover {

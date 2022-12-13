@@ -8,7 +8,9 @@ body {
     font-family: 'Roboto', Verdana, sans-serif;
     font-size: 1.6rem;
     margin: 0 auto;
-    
+    &._lock{
+        overflow: hidden;
+    }
 }
 
 h1 {

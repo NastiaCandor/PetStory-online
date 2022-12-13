@@ -408,6 +408,7 @@
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 140%;
+    -moz-appearance: textfield;
 }
 
 .picknfeed__input__dollar input[type=number]::-webkit-outer-spin-button,

@@ -241,14 +241,6 @@ const addTestimonials = () => {
     }
 };
 
-const checkDisplayWidthTestimonials = () => {
-    if (window.innerWidth <= 920) { // 640
-        return 4;
-    } else {
-        return 6;
-    }
-};
-
 document.querySelector('input[type="range"]').addEventListener('input', (event) => {
     let transformValue = (event.target.value)*297;
     document.querySelector('#testim-grid').style.cssText = `transform: translateX(-${transformValue}px)`;
@@ -258,50 +250,36 @@ document.querySelector('input[type="range"]').addEventListener('input', (event) 
 
 const popupTestimonials = () => {
     if (window.innerWidth <= 640) { // 640
-        // click on testimonials to open full
-        document.querySelector('.testim_grid_wrapper').addEventListener('click', (event) => {
-            event.preventDefault();
+        // add/remove class 'active' from popup elemetns and body
+        const tooglePopup = () => {
             document.querySelector('.popup__bg').classList.toggle('_active');
             document.querySelector('.popup__wrapper').classList.toggle('_active');
-            // putting testimonials content into popup
-            document.querySelector('._popup_content').innerHTML = event.path[event.path.length - 11].innerHTML;
-        });
-        
-        const closePopup = () => {
-            document.querySelector('.popup__bg').classList.toggle('_active');
-                document.querySelector('.popup__wrapper').classList.toggle('_active');
+            document.body.classList.toggle('_lock');
         };
+        
+        // click on testimonials to open full
+        document.querySelector('.testim_grid_wrapper').addEventListener('click', (event) => {
+            event.preventDefault();            
+            tooglePopup();
 
-        document.addEventListener('click', (event) => {
-            if (event.target === document.querySelector('.popup__bg')) {
-                closePopup();
+            // putting testimonials content into popup
+            if (event.path === undefined ) {
+                let path = event.composedPath();
+                document.querySelector('._popup_content').innerHTML = path[path.length - 11].innerHTML;
+            } else {
+                document.querySelector('._popup_content').innerHTML = event.path[event.path.length - 11].innerHTML;
             }
         });
-
+        
+        // click on body to close popup
+        document.addEventListener('click', (event) => {
+            if (event.target === document.querySelector('.popup__bg')) {
+                tooglePopup();
+            }
+        });
+        // click on x to close popup
         document.querySelector('.popup_close').addEventListener('click', () => {
-            closePopup();
+            tooglePopup();
         });
     }    
 };
-
-
-
-
-// // click on testimonials to open full
-// document.querySelectorAll('.testim__item').addEventListener('click', (event) => {
-//     event.preventDefault();
-//     console.log(event.value);
-//     // console.log(event.path.indexOf('div.testim__content'));
-
-
-//     document.querySelector('.popup__bg').classList.toggle('_active');
-//     document.querySelector('.popup__wrapper').classList.toggle('_active');
-//     // putting testimonials content into popup
-//     document.querySelector('._popup_content').innerHTML = event.path[1].innerHTML;
-// });
-
-// document.querySelector('.popup__bg').addEventListener('click', () => {
-//     document.querySelector('.popup__bg').classList.toggle('_active');
-//     document.querySelector('.popup__wrapper').classList.toggle('_active');
-// });
-// };

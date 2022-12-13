@@ -108,3 +108,21 @@
 .designed__link {
     margin: 0 0 0 auto;
 }
+
+.menu__bg {
+    position: fixed;
+    transition: 0.3s all ease-in-out 0.3s;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100vw;
+    height: 1000vw;
+    pointer-events: none;
+    z-index: 10;
+    &._active {
+        pointer-events: all;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.5);
+        transition: 0.3s all ease-in-out 0.3s;
+    }
+}
